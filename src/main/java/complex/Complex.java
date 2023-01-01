@@ -6,7 +6,6 @@ public class Complex {
     float imaginaryPart = 0;
 
     public Complex() {
-        super();
     }
 
     public Complex(float a, float b) {
