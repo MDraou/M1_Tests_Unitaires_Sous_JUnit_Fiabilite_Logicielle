@@ -27,6 +27,7 @@ build:
 
 test-junit:
   stage: test
+  image: openjdk:17-alpine
   script:
     - ./gradlew test
   artifacts:
