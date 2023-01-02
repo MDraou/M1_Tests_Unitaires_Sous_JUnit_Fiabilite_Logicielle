@@ -5,6 +5,8 @@ public class Complex {
     float realPart = 0;
     float imaginaryPart = 0;
 
+    private static final float EPSILON = 0.000001F;
+
     public Complex() {
     }
 
@@ -15,7 +17,7 @@ public class Complex {
 
 
     public boolean isZero() {
-        return ((this.realPart == 0) && (this.imaginaryPart == 0));
+        return ((Math.abs(this.realPart) <= EPSILON) && (Math.abs(this.imaginaryPart) <= EPSILON));	
     }
 
     public float getRealPart() {
