@@ -4,7 +4,7 @@ Modèle de projet gradle pour interface graphique avec `swing`.
 
 Les commandes gradle les plus utiles :
 
-- `gradle test` pour lancer les tests (rapports dans `build/reports/jacoco/tests/test`),
+- `gradle test` pour lancer les tests (rapports dans `build/reports/tests/test`),
 - `gradle run` pour lancer le programme,
 - `gradle jacocoTestReport` pour lancer la couverture de code via l'outil [Jacoco](https://www.eclemma.org/jacoco/) (rapports dans `build/reports/jacoco/test`). 
 
