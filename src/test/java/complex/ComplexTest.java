@@ -126,7 +126,7 @@ class ComplexTest {
 
 
   // TODO: activate test
-  @Disabled
+  @Test
   void testProductReal() {
     Complex z1 = new Complex(1.0F, 2.0F);
     Complex z2 = new Complex(3.0F, 4.0F);
@@ -140,7 +140,7 @@ class ComplexTest {
   }
 
   // TODO: activate test
-  @Disabled
+  @Test
   void testProductImaginary() {
     Complex z1 = new Complex(1.0F, 2.0F);
     Complex z2 = new Complex(3.0F, 4.0F);
