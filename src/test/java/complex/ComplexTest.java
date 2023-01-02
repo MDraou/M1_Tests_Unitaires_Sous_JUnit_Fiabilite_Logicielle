@@ -61,7 +61,7 @@ class ComplexTest {
     float expected = 1.0F;
     Complex z = new Complex(1.0F, 2.0f);
 
-    assertThat(z.getRealPart()).as("problem on getter imaginary")
+    assertThat(z.getRealPart()).as("problem on getter real")
             .isCloseTo(expected, within(EPSILON));
 
   }
