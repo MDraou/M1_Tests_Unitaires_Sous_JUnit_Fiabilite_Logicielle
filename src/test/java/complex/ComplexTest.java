@@ -157,7 +157,7 @@ class ComplexTest {
 
   // TODO: Write a test that fails if computation with infinite takes too long
 
-  @Disabled
+  @Test
   final void testTimeoutInfinite() {
     Complex.infinite();
     fail("NYI");
