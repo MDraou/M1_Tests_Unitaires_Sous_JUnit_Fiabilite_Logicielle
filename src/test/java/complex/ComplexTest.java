@@ -83,7 +83,7 @@ class ComplexTest {
     float expected = 3.0F;
     Complex z = new Complex();
     z.setRealPart(expected);
-    assertThat(z.getRealPart()).as("problem on getter imaginary")
+    assertThat(z.getRealPart()).as("problem on setter real")
             .isCloseTo(expected, within(EPSILON));
   }
 
@@ -109,7 +109,7 @@ class ComplexTest {
     float expected = 1.0F + 3.0F;
 
     Complex z = z1.sum(z2);
-    assertThat(z.getRealPart()).as("problem with Real part of Sum")
+    assertThat(z.getRealPart()).as("problem with real part of Sum")
             .isCloseTo(expected, within(EPSILON));
   }
 
@@ -120,7 +120,7 @@ class ComplexTest {
 
     float expected = 2.0F + 4.0F;
     Complex z = z1.sum(z2);
-    assertThat(z.getImaginaryPart()).as("problem with Imaginary part of Sum")
+    assertThat(z.getImaginaryPart()).as("problem with imaginary part of Sum")
             .isCloseTo(expected, within(EPSILON));
   }
 
@@ -132,7 +132,7 @@ class ComplexTest {
     float expected = 1.0F * 3.0F - 2.0F * 4.0F;
 
     Complex z = z1.product(z2);
-    assertThat(z.getRealPart()).as("problem with Real part of Product")
+    assertThat(z.getRealPart()).as("problem with real part of Product")
             .isCloseTo(expected, within(EPSILON));
 
   }
@@ -145,7 +145,7 @@ class ComplexTest {
     float expected = 1.0F * 4.0F + 2.0F * 3.0F;
 
     Complex z = z1.product(z2);
-    assertThat(z.getImaginaryPart()).as("problem with Imaginary part of Product")
+    assertThat(z.getImaginaryPart()).as("problem with imaginary part of Product")
             .isCloseTo(expected, within(EPSILON));
 
 
