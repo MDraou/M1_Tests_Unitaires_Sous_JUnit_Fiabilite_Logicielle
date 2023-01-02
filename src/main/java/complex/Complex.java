@@ -1,6 +1,6 @@
 package complex;
 
-@SuppressWarnings("PMD.JUnitAssertionsShouldIncludeMessage")
+
 public class Complex {
     float realPart = 0;
     float imaginaryPart = 0;

@@ -124,8 +124,6 @@ class ComplexTest {
             .isCloseTo(expected, within(EPSILON));
   }
 
-
-  // TODO: activate test
   @Test
   void testProductReal() {
     Complex z1 = new Complex(1.0F, 2.0F);
@@ -139,7 +137,6 @@ class ComplexTest {
 
   }
 
-  // TODO: activate test
   @Test
   void testProductImaginary() {
     Complex z1 = new Complex(1.0F, 2.0F);
