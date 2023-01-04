@@ -32,18 +32,18 @@ class ComplexTest {
 
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
-    System.out.println("beforeALL");
+    System.out.println("beforeAll");
   }
 
   @AfterAll
   static void tearDownAfterClass() throws Exception {
-    System.out.println("afterALL");
+    System.out.println("afterAll");
   }
 
   @BeforeEach
   void setUp() throws Exception {
     // TODO: add message
-    System.out.println("beforeEACH");
+    System.out.println("beforeEach");
     z = new Complex();
     z1 = new Complex(1.0F, 2.0F);
     z2 = new Complex(3.0F, 4.0F);
