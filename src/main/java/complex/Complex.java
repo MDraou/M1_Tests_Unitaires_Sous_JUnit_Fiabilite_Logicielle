@@ -42,7 +42,8 @@ public class Complex {
 
     public Complex product(Complex c) {
         // TODO: change code
-        return new Complex();
+        return new Complex(this.realPart * c.getRealPart() - this.imaginaryPart * c.getImaginaryPart(),
+                this.realPart * c.getImaginaryPart() + this.imaginaryPart * c.getRealPart());
     }
 
     public Complex inverse() throws IllegalArgumentException {
@@ -59,5 +60,12 @@ public class Complex {
     public static void infinite()
     {
         // TODO: add code
+        try {
+            while(true) {
+                Thread.sleep(100);
+            }
+        }catch (InterruptedException e) {
+            System.err.println("timeout interruption");
+        }
     }
 }
