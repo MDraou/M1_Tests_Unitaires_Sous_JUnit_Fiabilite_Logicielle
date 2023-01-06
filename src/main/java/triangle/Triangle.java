@@ -55,4 +55,22 @@ public class Triangle {
         public void setEdgeLengthC(float c) { this.edgeLengthC = c; }
 
 
+        public enum TriangleType(){
+            SCALENE,
+            ISOCELES,
+            EQUILATERAL
+        }
+
+        // à modifier
+        public TriangleType type(int typeTriangle) {
+            if (typeTriangle == 1) {
+                return TriangleType.SCALENE;
+            } else if (typeTriangle == 2) {
+                return TriangleType.ISOCELES;
+            } else {
+                return TriangleType.EQUILATERAL;
+            }
+        }
+
+
 }
