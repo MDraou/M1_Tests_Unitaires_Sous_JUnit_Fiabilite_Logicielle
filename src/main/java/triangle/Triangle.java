@@ -14,7 +14,7 @@ public class Triangle {
         }
 
         /**
-        * la somme de 2 côtés d'un triangle doit être supérieure au 3ème côté pour être un traingle
+        * la somme de 2 côtés d'un triangle doit être supérieure au 3ème côté pour être un triangle
         */
         public Triangle(float a, float b, float c) {
 
@@ -70,6 +70,7 @@ public class Triangle {
             } else {
                 return TriangleType.EQUILATERAL;
             }
+
         }
 
 
