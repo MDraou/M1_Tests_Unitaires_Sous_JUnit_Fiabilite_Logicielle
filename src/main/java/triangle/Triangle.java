@@ -10,6 +10,9 @@ public class Triangle {
         private float edgeLengthB = 0;
         private float edgeLengthC = 0;
 
+        public Triangle() {
+        }
+
         /**
         * la somme de 2 côtés d'un triangle doit être supérieure au 3ème côté pour être un traingle
         */
@@ -38,13 +41,18 @@ public class Triangle {
         }
 
         public float getEdgeLengthA(){
-            return edgeLengthA;
+            return this.edgeLengthA;
         }
         public double getEdgeLengthB(){
-            return edgeLengthB;
+            return this.edgeLengthB;
         }
         public double getEdgeLengthC(){
-            return edgeLengthC;
+            return this.edgeLengthC;
         }
+
+        public void setEdgeLengthA(float a){ this.edgeLengthA = a; }
+        public void setEdgeLengthB(float b) { this.edgeLengthB = b; }
+        public void setEdgeLengthC(float c) { this.edgeLengthC = c; }
+
 
 }
