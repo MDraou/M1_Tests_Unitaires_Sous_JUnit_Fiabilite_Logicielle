@@ -1,8 +1,10 @@
 package triangle;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Triangle {
 
@@ -30,11 +32,11 @@ public class Triangle {
         public Triangle(File inputTriangleData) {
 
             try {
-                FileWriter writer = new FileWriter(inputTriangleData, true);
-                writer.write("Ligne 1\n");
-                writer.write("Ligne 2\n");
-                writer.write("Ligne 3\n");
-                writer.close();
+                Scanner reader = new Scanner(inputTriangleData);
+                this.edgeLengthA = reader.nextInt();
+                this.edgeLengthB = reader.nextInt();
+                this.edgeLengthC = reader.nextInt();
+                reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -55,20 +57,20 @@ public class Triangle {
         public void setEdgeLengthC(float c) { this.edgeLengthC = c; }
 
 
-        public enum TriangleType(){
+        public enum TriangleType{
             SCALENE,
             ISOCELES,
             EQUILATERAL
         }
 
         // à modifier
-        public TriangleType type(int typeTriangle) {
-            if (typeTriangle == 1) {
-                return TriangleType.SCALENE;
-            } else if (typeTriangle == 2) {
+        public TriangleType type() {
+            if (edgeLengthA == edgeLengthB && edgeLengthB == edgeLengthC) {
+                return TriangleType.EQUILATERAL;
+            } else if (edgeLengthA == edgeLengthB || edgeLengthA == edgeLengthC || edgeLengthB == edgeLengthC) {
                 return TriangleType.ISOCELES;
             } else {
-                return TriangleType.EQUILATERAL;
+                return TriangleType.SCALENE;
             }
 
         }
