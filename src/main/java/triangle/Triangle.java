@@ -24,7 +24,7 @@ public class Triangle {
             this.edgeLengthB = b;
             this.edgeLengthC = c;
 
-            if(a + b > c) {
+            if(a + b < c && c + b < a && a + c < b ) {
                 throw new IllegalArgumentException("Not a triangle.");
             }
         }
