@@ -29,6 +29,7 @@ public class Triangle {
             }
         }
 
+        // à modifier
         public Triangle(File inputTriangleData) {
 
             try {
@@ -63,7 +64,6 @@ public class Triangle {
             EQUILATERAL
         }
 
-        // à modifier
         public TriangleType type() {
             if (edgeLengthA == edgeLengthB && edgeLengthB == edgeLengthC) {
                 return TriangleType.EQUILATERAL;

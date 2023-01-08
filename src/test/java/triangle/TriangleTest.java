@@ -37,4 +37,30 @@ class TriangleTest {
         assertEquals(expected, triangle1.getEdgeLengthC());
     }
 
+    /**
+     *  ajout des tests pour la méthode TriangleType type()
+     */
+    @Test
+    void testTypeEquilateral(){
+        Triangle.TriangleType expected = Triangle.TriangleType.EQUILATERAL;
+        triangle2 = new Triangle(3.0F, 3.0F, 3.0F);
+        assertEquals(expected,triangle2.type());
+    }
+
+    @Test
+    void testTypeIsoceles(){
+        Triangle.TriangleType expected = Triangle.TriangleType.ISOCELES;
+        triangle2 = new Triangle(2.0F, 2.0F, 3.0F);
+        assertEquals(expected,triangle2.type());
+    }
+
+    @Test
+    void testTypeScalene(){
+        Triangle.TriangleType expected = Triangle.TriangleType.SCALENE;
+        triangle3 = new Triangle(1.0F, 2.0F, 3.0F);
+        assertEquals(expected, triangle3.type());
+    }
+
+
+
 }
