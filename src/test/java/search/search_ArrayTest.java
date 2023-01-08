@@ -18,7 +18,6 @@ class search_ArrayTest {
 
     private int expected;
 
-
     /**
      * test pour la méthode search() de la classe search_Array_Class_1.
      */
@@ -36,6 +35,9 @@ class search_ArrayTest {
 
     }
 
+    /**
+     * test pour la méthode search() de la classe search_Array_Class_2.
+     */
     @Test
     void search_Array_Class_2_Test(){
         int expected = 1;
@@ -46,6 +48,10 @@ class search_ArrayTest {
         assertNotEquals(expected, 2);
     }
 
+
+    /**
+     * test pour la méthode search() de la classe search_Array_Class_3.
+     */
     @Test
     void search_Array_Class_3_Test(){
         int expected = 2;
@@ -57,6 +63,9 @@ class search_ArrayTest {
     }
 
 
+    /**
+     * test pour la méthode search() de la classe search_Array_Class_4.
+     */
     @Test
     void search_Array_Class_4_Test(){
         int expected = 3;
