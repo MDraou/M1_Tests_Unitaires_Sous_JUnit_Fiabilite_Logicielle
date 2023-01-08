@@ -12,6 +12,9 @@ public class Triangle {
         private float edgeLengthB = 0;
         private float edgeLengthC = 0;
 
+        // ajout :
+        private File inputTriangleData;
+
         public Triangle() {
         }
 
@@ -29,7 +32,7 @@ public class Triangle {
             }
         }
 
-        // à modifier
+        // à modifier :
         public Triangle(File inputTriangleData) {
 
             try {
@@ -41,6 +44,13 @@ public class Triangle {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            // ajout :
+            if (!inputTriangleData.getName().endsWith(".txt")) {
+                throw new IllegalArgumentException("Is not a text file.");
+            }
+            this.inputTriangleData = inputTriangleData;
+
         }
 
         public float getEdgeLengthA(){
