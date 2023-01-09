@@ -45,10 +45,6 @@ public class Triangle {
                 e.printStackTrace();
             }
 
-            // ajout :
-            if (!inputTriangleData.getName().endsWith(".txt")) {
-                throw new IllegalArgumentException("Is not a text file.");
-            }
             this.inputTriangleData = inputTriangleData;
 
         }

@@ -47,25 +47,25 @@ class TriangleTest {
     @Test
     void SetEdgeLengthA(){
         float expected = 1.0F;
-        triangle1 = new Triangle(1.0F, 3.0F, 2.0F);
-        triangle1.setEdgeLengthA(expected);
-        assertEquals(expected, 1.0F);
+        triangle1 = new Triangle(2.0F, 3.0F, 2.0F);
+        triangle1.setEdgeLengthA(1.0F);
+        assertEquals(expected, triangle1.getEdgeLengthA());
     }
 
     @Test
     void SetEdgeLengthB(){
         float expected = 3.0F;
-        triangle1 = new Triangle(1.0F,3.0F,2.0F);
-        triangle1.setEdgeLengthB(expected);
-        assertEquals(expected, 3.0F);
+        triangle1 = new Triangle(1.0F,2.0F,2.0F);
+        triangle1.setEdgeLengthB(3.0F);
+        assertEquals(expected, triangle1.getEdgeLengthB());
     }
 
     @Test
     void SetEdgeLengthC(){
         float expected = 2.0F;
-        triangle1 = new Triangle(1.0F,3.0F,2.0F);
-        triangle1.setEdgeLengthB(2.0F);
-        assertEquals(expected, 2.0F);
+        triangle1 = new Triangle(1.0F,2.0F,1.0F);
+        triangle1.setEdgeLengthC(2.0F);
+        assertEquals(expected, triangle1.getEdgeLengthC());
     }
 
 
