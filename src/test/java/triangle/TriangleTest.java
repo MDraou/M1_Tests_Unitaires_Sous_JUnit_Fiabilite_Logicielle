@@ -1,10 +1,11 @@
 package triangle;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
 
 
 /**
@@ -12,10 +13,12 @@ import org.junit.jupiter.api.Test;
  */
 class TriangleTest {
 
-    private Triangle triangle1;
-    private Triangle triangle2;
-    private Triangle triangle3;
+    private Triangle triangle;
 
+    @BeforeEach
+    void initTriangle() {
+        triangle = new Triangle(1.0F,3.0F,2.0F);
+    }
 
     /**
      *  ajout des tests pour les getters
@@ -23,22 +26,20 @@ class TriangleTest {
     @Test
     void testGetterEdgeLengthA(){
         float expected = 1.0F;
-        triangle1 = new Triangle(1.0F,3.0F,2.0F);
-        assertEquals(expected, triangle1.getEdgeLengthA());
+        assertEquals(expected, triangle.getEdgeLengthA());
     }
 
     @Test
     void testGetterEdgeLengthB(){
         float expected = 3.0F;
-        triangle1 = new Triangle(1.0F,3.0F,2.0F);
-        assertEquals(expected, triangle1.getEdgeLengthB());
+        triangle = new Triangle(1.0F,3.0F,2.0F);
+        assertEquals(expected, triangle.getEdgeLengthB());
     }
 
     @Test
     void testGetterEdgeLengthC(){
         float expected = 2.0F;
-        triangle1 = new Triangle(1.0F,3.0F,2.0F);
-        assertEquals(expected, triangle1.getEdgeLengthC());
+        assertEquals(expected, triangle.getEdgeLengthC());
     }
 
     /**
@@ -46,26 +47,23 @@ class TriangleTest {
      */
     @Test
     void SetEdgeLengthA(){
-        float expected = 1.0F;
-        triangle1 = new Triangle(2.0F, 3.0F, 2.0F);
-        triangle1.setEdgeLengthA(1.0F);
-        assertEquals(expected, triangle1.getEdgeLengthA());
+        float expected = 2.0F;
+        triangle.setEdgeLengthA(2.0F);
+        assertEquals(expected, triangle.getEdgeLengthA());
     }
 
     @Test
     void SetEdgeLengthB(){
-        float expected = 3.0F;
-        triangle1 = new Triangle(1.0F,2.0F,2.0F);
-        triangle1.setEdgeLengthB(3.0F);
-        assertEquals(expected, triangle1.getEdgeLengthB());
+        float expected = 2.0F;
+        triangle.setEdgeLengthB(2.0F);
+        assertEquals(expected, triangle.getEdgeLengthB());
     }
 
     @Test
     void SetEdgeLengthC(){
-        float expected = 2.0F;
-        triangle1 = new Triangle(1.0F,2.0F,1.0F);
-        triangle1.setEdgeLengthC(2.0F);
-        assertEquals(expected, triangle1.getEdgeLengthC());
+        float expected = 3.0F;
+        triangle.setEdgeLengthC(3.0F);
+        assertEquals(expected, triangle.getEdgeLengthC());
     }
 
 
@@ -75,24 +73,29 @@ class TriangleTest {
     @Test
     void testTypeEquilateral(){
         Triangle.TriangleType expected = Triangle.TriangleType.EQUILATERAL;
-        triangle2 = new Triangle(3.0F, 3.0F, 3.0F);
-        assertEquals(expected,triangle2.type());
+        triangle = new Triangle(3.0F, 3.0F, 3.0F);
+        assertEquals(expected,triangle.type());
     }
 
     @Test
     void testTypeIsoceles(){
         Triangle.TriangleType expected = Triangle.TriangleType.ISOCELES;
-        triangle2 = new Triangle(2.0F, 2.0F, 3.0F);
-        assertEquals(expected,triangle2.type());
+        triangle = new Triangle(2.0F, 2.0F, 3.0F);
+        assertEquals(expected,triangle.type());
     }
 
     @Test
     void testTypeScalene(){
         Triangle.TriangleType expected = Triangle.TriangleType.SCALENE;
-        triangle3 = new Triangle(1.0F, 2.0F, 3.0F);
-        assertEquals(expected, triangle3.type());
+        triangle = new Triangle(1.0F, 2.0F, 3.0F);
+        assertEquals(expected, triangle.type());
     }
 
-
+    @Test
+    void testTriangleFile() {
+        float expected = 2.0F;
+        triangle = new Triangle(new File("triangleFile"));
+        assertEquals(expected, triangle.getEdgeLengthA());
+    }
 
 }

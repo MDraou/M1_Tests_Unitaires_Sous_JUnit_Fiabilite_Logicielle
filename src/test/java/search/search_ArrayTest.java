@@ -2,9 +2,9 @@ package search;
 
 import com.company.*;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Disabled;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -14,9 +14,12 @@ import org.junit.jupiter.api.Test;
 // à continuer
 class search_ArrayTest {
 
-    private int[] t;
+    private int[] intArray;
 
-    private int expected;
+    @BeforeEach
+    void initArray() {
+        intArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    }
 
     /**
      * test pour la méthode search() de la classe search_Array_Class_1.
@@ -25,14 +28,10 @@ class search_ArrayTest {
     // à modifier
     @Test
     void search_Array_Class_1_Test() {
-
         int expected = 0;
         search_Array_Class_1 objet = new search_Array_Class_1();
-        int[] t = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        objet.search(t, 0);
+        objet.search(intArray, 0);
         assertEquals(expected,0);
-        assertNotEquals(expected, 1);
-
     }
 
     /**
@@ -42,10 +41,7 @@ class search_ArrayTest {
     void search_Array_Class_2_Test(){
         int expected = 1;
         search_Array_Class_2 objet = new search_Array_Class_2();
-        int[] t = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        objet.search(t,1);
-        assertEquals(expected, 1);
-        assertNotEquals(expected, 2);
+        assertEquals(expected, objet.search(intArray,1));
     }
 
 
@@ -55,11 +51,8 @@ class search_ArrayTest {
     @Test
     void search_Array_Class_3_Test(){
         int expected = 2;
-        search_Array_Class_2 objet = new search_Array_Class_2();
-        int[] t = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        objet.search(t,2);
-        assertEquals(expected, 2);
-        assertNotEquals(expected, 3);
+        search_Array_Class_3 objet = new search_Array_Class_3();
+        assertEquals(expected, objet.search(intArray,2));
     }
 
 
@@ -69,11 +62,8 @@ class search_ArrayTest {
     @Test
     void search_Array_Class_4_Test(){
         int expected = 3;
-        search_Array_Class_2 objet = new search_Array_Class_2();
-        int[] t = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        objet.search(t,3);
-        assertEquals(expected, 3);
-        assertNotEquals(expected, 4);
+        search_Array_Class_4 objet = new search_Array_Class_4();
+        assertEquals(expected, objet.search(intArray,3));
     }
 
 
