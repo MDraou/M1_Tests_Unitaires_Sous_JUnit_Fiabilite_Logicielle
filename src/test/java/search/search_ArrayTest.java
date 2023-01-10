@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
  * Test class for the search_Array Classes.
  */
 
-// à continuer
 class search_ArrayTest {
 
     private int[] intArray;
@@ -24,8 +23,6 @@ class search_ArrayTest {
     /**
      * test pour la méthode search() de la classe search_Array_Class_1.
      */
-
-    // à modifier
     @Test
     void search_Array_Class_1_Test() {
         int expected = 0;

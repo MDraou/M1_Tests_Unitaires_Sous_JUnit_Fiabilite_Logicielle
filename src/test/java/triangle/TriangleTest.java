@@ -20,6 +20,7 @@ class TriangleTest {
         triangle = new Triangle(1.0F,3.0F,2.0F);
     }
 
+
     /**
      *  ajout des tests pour les getters
      */

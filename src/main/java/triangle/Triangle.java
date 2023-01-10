@@ -11,8 +11,6 @@ public class Triangle {
         private float edgeLengthA = 0;
         private float edgeLengthB = 0;
         private float edgeLengthC = 0;
-
-        // ajout :
         private File inputTriangleData;
 
         public Triangle() {
@@ -33,7 +31,7 @@ public class Triangle {
         }
 
         private void testFileWhileReading(Scanner reader) {
-            if(!reader.hasNextLine()) throw new IllegalArgumentException("Le fichier n'a pas un bon format");
+            if(!reader.hasNextLine()) throw new IllegalArgumentException("The file is not in right format.");
         }
         public Triangle(File inputTriangleData) {
 
@@ -44,7 +42,7 @@ public class Triangle {
                 this.edgeLengthB = reader.nextInt();
                 testFileWhileReading(reader);
                 this.edgeLengthC = reader.nextInt();
-                if(reader.hasNextLine()) throw new IllegalArgumentException("Le fichier n'a pas un bon format");
+                if(reader.hasNextLine()) throw new IllegalArgumentException("The file is not in right format.");
                 reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
